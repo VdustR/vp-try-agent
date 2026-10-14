@@ -1,3 +1,5 @@
 minimumReleaseAgeStrict: true
 allowBuilds:
   sharp: false
+overrides:
+  'eve@0.53.1>undici': 8.10.2
