@@ -3028,8 +3028,8 @@ packages:
   undici-types@7.18.2:
     resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
 
-  undici@7.30.0:
-    resolution: {integrity: sha512-dkrQXeHSaoamnItlYbmzG0wFYrM0ZwDxCIg0A7aKjTyyhh9svRzCNFEzV+Vm05/yehjCzjDZ31KXfGEjYSztDQ==}
+  undici@7.30.1:
+    resolution: {integrity: sha512-03KrMbjIFDWQR5RNPrSw3bd1r12JpyFQl9/yxjUbJtqkjmllqC5lFjZh6ujeuJCKr8EOQvRW872Oy/az+nLYxg==}
     engines: {node: '>=20.18.1'}
 
   undici@8.12.2:
@@ -3149,7 +3149,7 @@ snapshots:
       '@standard-schema/spec': 1.1.0
       '@workflow/serde': 4.1.0
       eventsource-parser: 3.1.1
-      undici: 7.30.0
+      undici: 7.30.1
       zod: 4.4.3
 
   '@ai-sdk/provider@4.0.13':
@@ -6274,7 +6274,7 @@ snapshots:
 
   undici-types@7.18.2: {}
 
-  undici@7.30.0: {}
+  undici@7.30.1: {}
 
   undici@8.12.2: {}
 
