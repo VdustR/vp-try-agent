@@ -1,0 +1,35 @@
+name: Verify
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  compatibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NODE_ENV: production
+      VERCEL_URL: build.example.invalid
+      BETTER_AUTH_SECRET: build-only-placeholder-secret-with-at-least-32-characters
+      VERCEL_APP_CLIENT_ID: build-only-placeholder
+      VERCEL_APP_CLIENT_SECRET: build-only-placeholder
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24.22.1
+      - run: npm install --global pnpm@11.25.0
+      - run: pnpm install --frozen-lockfile --prod=false
+      - run: node scripts/verify-auth-compatibility.mjs
+      - run: node scripts/verify-dependency-consumers.mjs
+      - run: pnpm build:eve
+      - run: pnpm typecheck
+      - run: pnpm build
+      - run: pnpm typecheck
