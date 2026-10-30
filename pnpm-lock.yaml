@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  eve@0.53.1>undici: 8.10.2
+  eve@0.53.1>undici: 8.12.2
   katex@<0.18.2: 0.18.2
 
 importers:
@@ -3032,8 +3032,8 @@ packages:
     resolution: {integrity: sha512-dkrQXeHSaoamnItlYbmzG0wFYrM0ZwDxCIg0A7aKjTyyhh9svRzCNFEzV+Vm05/yehjCzjDZ31KXfGEjYSztDQ==}
     engines: {node: '>=20.18.1'}
 
-  undici@8.10.2:
-    resolution: {integrity: sha512-/y4/bH9YNU5hi9NIrpOuvGXFcxrj3CMrV+/AYpowAYTpHn8gX/XPFjNy766FPoYY0miQhdW977JFWKGNhBdwyQ==}
+  undici@8.12.2:
+    resolution: {integrity: sha512-XtuDWVdqTLr3NAxm2ly9/hU6kUsJOgGh1RASzMBbsw6aWCOaQzHdW+QQDfdERjfJ2V5vL5pRPa4RetO9UfivDg==}
     engines: {node: '>=22.19.0'}
 
   unenv@2.0.0-rc.24:
@@ -5028,7 +5028,7 @@ snapshots:
     dependencies:
       ai: 7.0.97(zod@4.4.3)
       nitro: 3.0.260903-beta
-      undici: 8.10.2
+      undici: 8.12.2
 
   eventsource-parser@3.1.1: {}
 
@@ -6276,7 +6276,7 @@ snapshots:
 
   undici@7.30.0: {}
 
-  undici@8.10.2: {}
+  undici@8.12.2: {}
 
   unenv@2.0.0-rc.24:
     dependencies:
